@@ -1,0 +1,17 @@
+#Spring Cloud Config Server config file
+server.port: 8888
+spring:
+  application:
+    name: Spring Cloud Server of Honeymon
+  cloud:
+    config:
+      server:
+        git: #private 인 경우에는 어떻게 해야해?
+          uri: https://github.com/ihoneymon/msa-training-config-repo
+          repos:
+            blog-java:
+              uri: https://github.com/ihoneymon/msa-training-config-repo/blog-java
+            blog-lifestyle:
+              uri: https://github.com/ihoneymon/msa-training-config-repo/blog-lifestyle
+            blog-github:
+              uri: https://github.com/ihoneymon/msa-training-config-repo/blog-github
